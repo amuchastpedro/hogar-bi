@@ -1,0 +1,27 @@
+categoria,codigo,nombre,imputacion_defecto
+agua,cuota_servicio,Cuota del servicio,periodo
+agua,consumo_agua,Consumo de agua,periodo
+agua,canon_agua,Canon del agua,periodo
+agua,alcantarillado,Tasa de alcantarillado,periodo
+agua,residuos_municipales,Tasa de recogida de residuos municipales,periodo
+agua,tmtr,Tasa metropolitana de tratamiento de residuos,periodo
+agua,iva,IVA,periodo
+gas,consumo_gas,Consumo de gas,periodo
+gas,termino_fijo,Término fijo,periodo
+gas,impuesto_hidrocarburos,Impuesto especial sobre hidrocarburos,periodo
+gas,iva,IVA,periodo
+gas,inspeccion_periodica,Inspección periódica de la instalación,puntual
+gas,otros_servicios,Otros productos y servicios,periodo
+luz,consumo_electricidad,Consumo de electricidad,periodo
+luz,potencia_p1,Término de potencia P1,periodo
+luz,potencia_p2,Término de potencia P2,periodo
+luz,bono_social,Financiación del bono social,periodo
+luz,alquiler_contador,Alquiler de contador,periodo
+luz,impuesto_electricidad,Impuesto sobre la electricidad,periodo
+luz,iva,IVA,periodo
+fibra,cuota_fibra,Cuota de fibra,periodo
+fibra,iva,IVA,periodo
+movil,cuota_plan,Cuota del plan,periodo
+movil,consumo_incluido,Consumo incluido en el plan,periodo
+movil,consumo_adicional,Consumo adicional,periodo
+movil,iva,IVA,periodo

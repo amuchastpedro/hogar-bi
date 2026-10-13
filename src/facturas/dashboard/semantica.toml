@@ -1,0 +1,143 @@
+# Capa semántica del dashboard: cómo se interpretan los conceptos de cada categoría.
+#
+# Es lo único específico del caso fuera del archivo de caso, `parsers/` y `semillas/`
+# (docs/diseno.md, sección 14). Lo lee y lo valida `semantica.py`.
+#
+# Para cada categoría (código de la base):
+# - nombre: el que muestra la interfaz, en inglés;
+# - magnitud: la que da el volumen (código de la base); solo en los servicios con volumen;
+# - variables: los conceptos que escalan con el volumen. Su importe dividido por el
+#   volumen es el precio unitario efectivo. Solo con magnitud;
+# - grupos, en el orden en que se muestran: [<categoría>.grupos.<código>] con su nombre
+#   y sus conceptos (código de la base = nombre en inglés), también en orden.
+#
+# Un concepto de la base que no está en ningún grupo se muestra en «Unclassified».
+# El IVA no es variable en ningún servicio: grava a la vez la parte fija y la variable
+# (en el agua, el 10 % de la cuota y el consumo), así que el precio unitario es sin IVA.
+
+[agua]
+nombre = "Water"
+magnitud = "volumen"
+# El alcantarillado sale a Z,XK €/m³ en todas las facturas, y el canon, a J,XK €/m³ hasta
+# 2025 (con 10 m³ cobra 12); en 2026 suma una parte fija (Q,JZ € en la de abril). El IVA es
+# el 10 % de la cuota y el consumo. Evidencia en la bitácora, «Dashboard, etapa 1».
+variables = ["consumo_agua", "canon_agua", "alcantarillado"]
+
+[agua.grupos.ciclo_agua]
+nombre = "Water cycle"
+
+[agua.grupos.ciclo_agua.conceptos]
+cuota_servicio = "Service fee"
+consumo_agua = "Water consumption"
+canon_agua = "Water levy"
+alcantarillado = "Sewerage fee"
+iva = "VAT"
+
+[agua.grupos.residuos]
+nombre = "Waste"
+
+[agua.grupos.residuos.conceptos]
+residuos_municipales = "Municipal waste collection fee"
+tmtr = "Metropolitan waste treatment fee"
+
+[luz]
+nombre = "Electricity"
+magnitud = "energia"
+variables = ["consumo_electricidad"]
+
+[luz.grupos.energia]
+nombre = "Energy"
+
+[luz.grupos.energia.conceptos]
+consumo_electricidad = "Electricity consumption"
+
+[luz.grupos.potencia]
+nombre = "Power"
+
+[luz.grupos.potencia.conceptos]
+potencia_p1 = "Power term P1"
+potencia_p2 = "Power term P2"
+
+[luz.grupos.otros_fijos]
+nombre = "Other fixed"
+
+[luz.grupos.otros_fijos.conceptos]
+alquiler_contador = "Meter rental"
+bono_social = "Social bonus funding"
+
+[luz.grupos.impuestos]
+nombre = "Taxes"
+
+[luz.grupos.impuestos.conceptos]
+impuesto_electricidad = "Electricity tax"
+iva = "VAT"
+
+[gas]
+nombre = "Gas"
+magnitud = "energia"
+# El impuesto sobre hidrocarburos se cobra por kWh: Z,XJZZ €/kWh hasta 2025.
+variables = ["consumo_gas", "impuesto_hidrocarburos"]
+
+[gas.grupos.energia]
+nombre = "Energy"
+
+[gas.grupos.energia.conceptos]
+consumo_gas = "Gas consumption"
+
+[gas.grupos.fijo]
+nombre = "Fixed"
+
+[gas.grupos.fijo.conceptos]
+termino_fijo = "Fixed term"
+
+[gas.grupos.otros_fijos]
+nombre = "Other fixed"
+
+[gas.grupos.otros_fijos.conceptos]
+inspeccion_periodica = "Periodic inspection"
+otros_servicios = "Other products and services"
+
+[gas.grupos.impuestos]
+nombre = "Taxes"
+
+[gas.grupos.impuestos.conceptos]
+impuesto_hidrocarburos = "Hydrocarbons tax"
+iva = "VAT"
+
+[fibra]
+nombre = "Wifi"
+
+[fibra.grupos.cuota]
+nombre = "Fee"
+
+[fibra.grupos.cuota.conceptos]
+cuota_fibra = "Fiber fee"
+
+[fibra.grupos.iva]
+nombre = "VAT"
+
+[fibra.grupos.iva.conceptos]
+iva = "VAT"
+
+[movil]
+nombre = "Mobile"
+
+[movil.grupos.cuota]
+nombre = "Fee"
+
+[movil.grupos.cuota.conceptos]
+cuota_plan = "Plan fee"
+# Las llamadas incluidas en el plan: siempre a 0 €, las paga la cuota.
+consumo_incluido = "Usage included in the plan"
+
+[movil.grupos.consumo_adicional]
+nombre = "Extra usage"
+
+[movil.grupos.consumo_adicional.conceptos]
+consumo_adicional = "Extra usage"
+
+[movil.grupos.iva]
+nombre = "VAT"
+
+[movil.grupos.iva.conceptos]
+iva = "VAT"

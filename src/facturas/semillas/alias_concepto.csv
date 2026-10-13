@@ -1,0 +1,29 @@
+categoria,concepto,patron_seccion,patron_texto
+agua,cuota_servicio,*,*cuota*servicio*
+agua,consumo_agua,*,tramo*
+agua,canon_agua,*,*canon*
+agua,iva,*,iva*
+agua,alcantarillado,*,*alcantarillado*
+agua,residuos_municipales,*,*residuos*domicilios*
+agua,tmtr,*,*tratamiento*residuos*
+gas,consumo_gas,*,*consumo*
+gas,termino_fijo,*,*termino fijo*
+gas,impuesto_hidrocarburos,*,*hidrocarburos*
+gas,iva,*,iva*
+gas,iva,*,total iva*
+gas,inspeccion_periodica,*,*inspeccion*
+gas,otros_servicios,*,*servielectric*
+luz,consumo_electricidad,*,*consumo*
+luz,potencia_p1,*,*potencia*p1*
+luz,potencia_p2,*,*potencia*p2*
+luz,bono_social,*,*bono social*
+luz,alquiler_contador,*,*alquiler*
+luz,impuesto_electricidad,*,*impuesto*electric*
+luz,iva,*,iva*
+luz,iva,*,total iva*
+fibra,cuota_fibra,productos,* (* - *)
+fibra,iva,,impuestos (*% iva)
+movil,cuota_plan,productos,* (* - *)
+movil,consumo_incluido,consumo incluido en el plan,*
+movil,consumo_adicional,consumo adicional,*
+movil,iva,,impuestos (*% iva)

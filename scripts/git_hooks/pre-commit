@@ -1,0 +1,5 @@
+#!/bin/sh
+# Bloquea commits con datos personales. Se activa con:
+#   git config core.hooksPath scripts/git_hooks
+raiz="$(git rev-parse --show-toplevel)"
+exec python "$raiz/scripts/git_hooks/datos_personales.py"

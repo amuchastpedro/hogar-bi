@@ -1,0 +1,4 @@
+# Solo la configuración de pytest: el proyecto no se instala como paquete.
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

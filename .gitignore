@@ -1,0 +1,25 @@
+# Datos personales y archivos generados: nunca se versionan (tarea.md, "Restricciones").
+datos/
+ejemplos/
+
+# Bases de datos y logs, estén donde estén
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite
+*.sqlite3
+*.log
+logs/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Configuración local de Claude Code
+.claude/settings.local.json

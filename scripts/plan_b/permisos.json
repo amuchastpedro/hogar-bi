@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "defaultMode": "dontAsk",
+    "allow": [
+      "Read(./**)",
+      "Edit(./**)",
+      "Write(./**)",
+      "Bash(.venv/Scripts/python -m pytest *)",
+      "Bash(.venv/Scripts/python scripts/plan_b/texto_pdf.py *)",
+      "Bash(git status *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git diff)",
+      "Bash(git log *)",
+      "Bash(git show *)",
+      "Bash(git add *)",
+      "Bash(git rm *)",
+      "Bash(git mv *)",
+      "Bash(git commit *)"
+    ],
+    "deny": [
+      "Edit(./.venv/**)",
+      "Write(./.venv/**)",
+      "Edit(./scripts/**)",
+      "Write(./scripts/**)",
+      "Edit(./.claude/**)",
+      "Write(./.claude/**)",
+      "Edit(./.git)",
+      "Write(./.git)",
+      "Edit(./ejemplos/**)",
+      "Write(./ejemplos/**)",
+      "WebFetch",
+      "WebSearch"
+    ]
+  }
+}

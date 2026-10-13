@@ -1,0 +1,4 @@
+categoria,magnitud,unidad_canonica,unidad_contador
+agua,volumen,m3,m3
+gas,energia,kwh,m3
+luz,energia,kwh,kwh

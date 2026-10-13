@@ -1,0 +1,2 @@
+# El hook lo ejecuta sh: con saltos de línea CRLF fallaría.
+scripts/git_hooks/pre-commit text eol=lf
